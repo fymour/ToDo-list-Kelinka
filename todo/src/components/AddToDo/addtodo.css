@@ -1,0 +1,44 @@
+.block{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.addtodo{
+    width: 400px;
+    height: 150px;
+    background-color: rgba(160, 81, 45, 0.53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    margin: 40px 0px;
+}
+.labeladd{
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+}
+.inputadd{
+    width: 70%;
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    background-color: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+.inputadd::placeholder{
+    color: red;
+}
+.submitbtn{
+    padding: 10px;
+    border-radius: 30px;
+    background-color:sienna;
+    color: white;
+    border: none;
+
+}

@@ -1,0 +1,38 @@
+.blocks{
+    width: 80%;
+    margin: auto;
+    background-color: rgba(160, 81, 45, 0.53);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.kanka{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.icons{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.saving button{
+    padding: 20px;
+    background-color: sienna;;
+    border-radius: 30px;
+    border: none;
+
+}
+.whenchange input{
+    font-family: 'Caveat', cursive;
+    color: black;
+    font-size: 20px;
+}
