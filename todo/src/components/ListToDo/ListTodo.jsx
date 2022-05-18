@@ -8,7 +8,7 @@ export default function Listtodo({ todo, setTodo }) {
     const [value, setValue] = useState('')
 
     function deleteTodo(id) {
-        let newTodo = [...todo].filter(item => item.id != id)
+        let newTodo = [...todo].filter(item => item.id !== id)
         setTodo(newTodo)
     }
     function editTodo(id, title) {
@@ -17,24 +17,27 @@ export default function Listtodo({ todo, setTodo }) {
     }
     function saveTodo(id) {
         let newTodo = [...todo].map(item => {
-            if (item.id == id) {
+            if (item.id === id) {
                 item.title = value
             }
             return item
         })
         setTodo(newTodo)
+
         setEdit(null)
+        setValue('')
     }
     function statusTodo(id) {
         let newTodo = [...todo].filter(item => {
-            if (item.id = id) {
-                item.boolean = !item.boolean
+            if (item.id === id) {
+                item.complete = !item.complete
             }
             return item
         })
         setTodo(newTodo)
     }
 
+    console.log('todo', todo)
     return (
         <div className='blocks'>
             {
@@ -50,7 +53,7 @@ export default function Listtodo({ todo, setTodo }) {
                         }
 
                         {
-                            edit == item.id ?
+                            edit === item.id ?
                                 <div className='saving'>
                                     <button onClick={() => saveTodo(item.id)}>Сохранить</button>
                                 </div> :
@@ -62,14 +65,17 @@ export default function Listtodo({ todo, setTodo }) {
                                         edit
                                     </span></button>
                                     <button onClick={() => statusTodo(item.id)}
-                                    >{
-                                            item.boolean ?
+                                    >
+                                        {
+                                            item.complete ? (
                                                 <span className="material-symbols-outlined">
                                                     check_circle
-                                                </span>:
+                                                </span>
+                                            ) : (
                                                 <span className="material-symbols-outlined">
                                                     close
-                                                </span>g
+                                                </span>
+                                            )
                                         }
                                     </button>
                                 </div>
